@@ -1,6 +1,3 @@
-rouge
-=====
-
 A personal modification of the Ghost Theme Day & Night by phantomus
 
 ##Changes from Day & Night
