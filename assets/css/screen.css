@@ -1,0 +1,1300 @@
+@import url(normalize.css);
+
+@font-face { 
+    font-family: 'icon-font';
+    src:url('../fonts/icon-font.eot?-mchb95');
+    src:url('../fonts/icon-font.eot?#iefix-mchb95') format('embedded-opentype'),
+        url('../fonts/icon-font.woff?-mchb95') format('woff'),
+        url('../fonts/icon-font.ttf?-mchb95') format('truetype'),
+        url('../fonts/icon-font.svg?-mchb95#icon-font') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="sicon-"], [class*=" sicon-"] {
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* v1 */
+.sicon-yt:before {content: "\e600";}
+.sicon-v:before {content: "\e601";}
+.sicon-tw:before {content: "\e602";}
+.sicon-st:before {content: "\e603";}
+.sicon-rss:before {content: "\e604";}
+.sicon-rd:before {content: "\e605";}
+.sicon-p:before {content: "\e606";}
+.sicon-m:before {content: "\e607";}
+.sicon-l:before {content: "\e608";}
+.sicon-in:before {content: "\e609";}
+.sicon-gh:before {content: "\e60a";}
+.sicon-g:before {content: "\e60b";}
+.sicon-fl:before {content: "\e60c";}
+.sicon-f:before {content: "\e60d";}
+.sicon-dr:before {content: "\e60e";}
+
+html {
+    height: 100%;
+    max-height: 100%;
+    font-size: 100%;
+}
+
+body {
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4em;
+    font-weight: 300;
+    background: #ccc;
+    color: #333;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.night {
+    background: #333;
+    color: #ccc;
+}
+
+.main-row {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.no-sp {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+::-moz-selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+
+::selection {
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.2rem;
+    line-height: 2.3rem;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
+
+h2 {
+    font-size: 1.9rem;
+    line-height: 2.0rem;
+    letter-spacing: -1px;
+    text-indent: -2px;
+}
+
+h3 {
+    font-size: 1.7rem;
+    line-height: 1.8rem;
+}
+
+h4 {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+}
+
+h6 {
+     font-size: 1rem;
+     line-height: 1.2rem;
+}
+
+body a {
+    color: #333;
+    text-decoration: underline;
+    transition: color ease 0.3s;
+}
+
+body a:hover {
+    color: #666;
+}
+
+.night a {
+    color: #ccc;
+}
+
+.night a:hover {
+    color: #fff;
+}
+
+
+p, dl {
+    margin: 1rem 0;
+    font-weight: 300;
+}
+
+ul, ol {
+  margin-top: 1rem;
+  margin-left: 2rem;   
+    font-weight: 300;  
+}
+
+ol ol, ul ul,
+ul ol, ol ul {
+    margin: 0.4em 0;
+}
+
+dl dt {
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em
+}
+
+dl dd {
+    margin-left: 200px;
+    margin-bottom: 1em
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 3.2em 0;
+    padding: 0;
+}
+
+.night hr {
+    border-top: 1px solid #ccc;
+}
+
+blockquote {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0 1.6em -2.2em;
+    padding: 0 0 0 1.6em;
+    border-left: #333 0.4em solid;
+}
+
+.night blockquote {
+    border-left: #ccc 0.4em solid;
+}
+
+blockquote p {
+    margin: 0.8em 0;
+    font-style: italic;
+}
+
+blockquote small {
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size:0.9em;
+    color: #ccc;
+}
+
+blockquote small:before { content: '\2014 \00A0'; }
+
+blockquote cite {
+    font-weight:bold;
+}
+
+blockquote cite a { font-weight: normal; }
+
+mark {
+    background-color: #333;
+    color: #ccc;
+}
+
+.night mark {
+    background-color: #ccc;
+    color: #333;
+}
+
+code, tt {
+    padding: 1px 3px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+    background: #ccc;
+    border-radius: 2px;
+    color: #333;
+}
+
+.night code, .night tt {
+    color: #ccc;
+    background: #333;
+}
+
+pre {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #333;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #ccc;
+    border-radius: 3px;
+    color: #333;
+    font-weight: 300;
+}
+
+.night pre {
+    color: #ccc;
+    background: #333;
+    border: 1px solid #ccc;
+}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+kbd {
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: 1px solid #333;
+    color: #333;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #ccc;
+    border-radius: 4px;
+}
+
+.night kbd {
+    background: #333;
+    border: 1px solid #ccc;
+    color: #ccc;
+}
+
+table {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width:100%;
+    max-width: 100%;
+    background-color: transparent;
+}
+
+table th,
+table td {
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #333;
+}
+
+.night table th,
+.night table td {
+    border-top: 1px solid #ccc;
+}
+
+table th { color: #333; }
+.night table th { color: #ccc; }
+
+table caption + thead tr:first-child th,
+table caption + thead tr:first-child td,
+table colgroup + thead tr:first-child th,
+table colgroup + thead tr:first-child td,
+table thead:first-child tr:first-child th,
+table thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+table tbody + tbody { border-top: 2px solid #333; }
+table table table { background-color: #ccc; }
+
+.night table tbody + tbody { border-top: 2px solid #ccc; }
+.night table table { background-color: #333; }
+
+table tbody > tr:nth-child(odd) > td,
+table tbody > tr:nth-child(odd) > th {
+    background-color: #333;
+    color: #ccc;
+}
+
+.night table tbody > tr:nth-child(odd) > td,
+.night tbody > tr:nth-child(odd) > th {
+    background-color: #ccc;
+    color: #333;
+}
+
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+   background: transparent;
+}
+
+iframe, .fluid-width-video-wrapper {
+    display: block;
+    margin: 1.6em 0;
+}
+
+
+/* When a video is inside the fitvids wrapper, drop the
+margin on the iframe, cause it breaks stuff. */
+.fluid-width-video-wrapper iframe {
+    margin: 0;
+}
+
+
+.o {
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.w {
+    height: 100%;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+}
+
+.c {
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.dn-odd-parent.sm-aj, .dn-post-c.sm-aj, .dn-even-parent.sm-aj {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* ==========================================================================
+   3. Utilities - These things get used a lot
+   ========================================================================== */
+
+/* Hides shit */
+.hidden {
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
+
+/* Creates a responsive wrapper that makes our content scale nicely */
+.inner {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Centres vertically yo. (IE8+) */
+.vertical {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+/* ==========================================================================
+   4. General - The main styles for the the theme
+   ========================================================================== */
+
+.blog-logo {
+    text-decoration: none;
+}
+
+.blog-logo img {
+    display: block;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
+
+.blog-title {
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.1);
+}
+
+.blog-description {
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 300;
+    font-family: 'Roboto', serif;
+    letter-spacing: 0;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+}
+
+/* Every post, on every page, gets this style on its <article> tag */
+.post {
+    position: relative;
+    padding-bottom: 2rem;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.post-title {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.post-title a {
+    text-decoration: none;
+}
+
+.post-excerpt p {
+    margin: 1.6rem 0 0 0;
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+.dn-head-meta {
+    display: inline-block;
+    margin: 0 0 5px 0;
+}
+
+.post-meta {
+    display: inline-block;
+    margin: 0 0 5px 0;
+    font-size: 0.75rem;
+}
+
+.post-meta a:hover {
+    text-decoration: underline;
+}
+
+.user-meta {
+    position: relative;
+    padding: 0.3rem 40px 0 100px;
+    min-height: 77px;
+}
+
+.user-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.user-name {
+    display: block;
+    font-weight: bold;
+}
+
+.user-bio {
+    display: block;
+    max-width: 440px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+.publish-meta {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4.3rem 0 4rem 0;
+    text-align: right;
+}
+
+.publish-heading {
+    display: block;
+    font-weight: bold;
+}
+
+.publish-date {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
+
+.dn-sep {
+    font-family: 'Arial', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 0.75rem;
+}
+
+.dn-sep-end {
+    font-family: 'Arial', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+    margin-top: 0.75rem;
+    position: absolute;
+    right: 0;
+}
+
+.dn-author {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.75rem;
+}
+
+.dn-date-share {
+    border: 1px solid #333;
+    padding: 10px;
+    width: 100%;
+}
+
+.night .dn-date-share {
+    border-color: #ccc;
+}
+
+.dn-share {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+}
+
+.dn-share a {
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+.dn-load-img {
+    text-align: center;
+}
+
+/* ==========================================================================
+   5. Single Post - When you click on an individual post
+   ========================================================================== */
+
+/* Tweak the .post wrapper style */
+.post-template .post {
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Insert some mad padding up in the header for better spacing */
+.post-template .post-header {
+    
+}
+
+.post-template .blog-title {
+    display: inline-block;
+    padding: 2.5rem 0;
+}
+
+/* Keep large images within the bounds of the post-width */
+.post-content img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* The author credit area after the post */
+.post-footer {
+    position: relative;
+    margin-top: 3rem;
+}
+
+.post-footer h4 {
+    font-size: 1.0rem;
+    font-weight: normal;
+}
+
+.post-footer p {
+   font-size: 0.8rem;
+    line-height: 1.3em;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Create some space to the right for the share links */
+.post-footer .author {
+    margin-top: 0px;
+    margin-left: 130px;
+}
+
+.post-footer .author.nlm {
+    margin-left: 0 !important;
+}
+
+.post-footer .author .uimg-a {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 110px;
+    height: 110px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+    border: 1px solid #333;
+}
+
+.night .post-footer .author .uimg-a {
+    border: 1px solid #ccc;
+}
+
+.post-footer .dn-share {
+    position: absolute;
+    top: 15px;
+    right: 0px;
+}
+
+.post-footer .dn-share a {
+    text-decoration: none;
+}
+
+.footer-right {
+    text-align: right;
+    padding-top: 8px;
+}
+
+
+/* ==========================================================================
+   6. Third Party Elements - Embeds from other services
+   ========================================================================== */
+
+/* Github */
+
+.gist table {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.gist .line-number {
+    min-width: 25px;
+    font-size: 1.1rem;
+}
+
+
+/* ==========================================================================
+   7. Pagination - Tools to let you flick between pages
+   ========================================================================== */
+
+/* The main wrapper for our pagination links */
+.pagination {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: normal;
+}
+
+
+/* Push the previous/next links out to the left/right */
+.older-posts,
+.newer-posts {
+    display: block;
+    text-decoration: none;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 0.9rem;
+}
+
+.older-posts {
+    right: 0;
+}
+
+.page-number {
+    display: inline-block;
+    padding: 2px 0;
+}
+
+.newer-posts {
+    left: 0;
+}
+
+.older-posts:hover,
+.newer-posts:hover {
+    border-color: #9EABB3;
+}
+
+
+/* ==========================================================================
+   8. Footer - The bottom of every page
+   ========================================================================== */
+
+.site-footer {
+    position: relative;
+    margin: 3rem 0 0 0;
+    padding: 3rem 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+    text-align: center;
+    font-weight: 300;
+}
+
+.night .site-footer {
+    background-color: #333;
+    color: #ccc;
+}
+
+.poweredby .icon-ghost {
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.poweredby .icon-ghost:hover {
+    text-decoration: none;
+}
+
+.poweredby .icon-ghost:before {
+    font-size: 1rem;
+    margin-right: 0.2em;
+}
+
+/* The subscribe icon on the footer */
+a.subscribe {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-left: -15px;
+    text-align: center;
+    line-height: 1.6rem;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+.dn-side-bar {
+    border-right: 1px solid #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 120px;
+    z-index: 99;
+}
+
+.night .dn-side-bar {
+    border-right: 1px solid #ccc;
+}
+
+.start .uimg {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+    border: 1px solid #333;
+}
+
+.start .uimg-d {
+    background: url(icons/day-heart.png) no-repeat;
+    display: inline-block;
+    width: 70px;
+    height: 62px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.dn-side-bar .uimg {
+    cursor: pointer; 
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    display: block;
+    width: 70px;
+    height: 70px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 100%;
+    border: 1px solid #333;
+}
+
+.night .dn-side-bar .uimg {
+    border: 1px solid #ccc;
+}
+
+.dn-side-bar .uimg-d {
+    cursor: pointer;
+    background: url(icons/day-heart.png) no-repeat;
+    position: absolute;
+    left: 25px;
+    bottom: 10px;
+    display: block;
+    width: 70px;
+    height: 62px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.night .dn-side-bar .uimg-d {
+   background: url(icons/night-heart.png) no-repeat;
+}
+
+.dn-blog-name {
+    filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);
+    -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)";
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: left top;
+    -moz-transform: rotate(-90deg);
+    -moz-transform-origin: left top;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: left top;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+    position: absolute;
+    bottom: 60px;
+    left: 48px;
+    width: 500px;
+    max-width: 500px;
+    z-index: -100;
+}
+
+.dn-side-menu {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.dn-center {
+    text-align: center;   
+    float: left;
+    width: 100%;
+}
+
+.dn-msep {
+    margin: 0; 
+    width: 80%;
+    margin-left: 10%;
+}
+
+.dn-menu-sep {
+    float: left;
+    width: 80%;
+    height: 1px;
+    max-height: 1px;
+    background-color: #333;
+}
+
+.night .dn-menu-sep {
+    background-color: #ccc;
+}
+
+.dn-menu-sec {
+    float: left;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.dn-clock {
+    background: url(icons/menu/PH_Day_50x50.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.night .dn-clock {
+    background: url(icons/menu/PH_Night_50x50.png) no-repeat;
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.dn-time {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.side-nav {
+  display: block;
+  margin: 0;
+  padding: 0.875rem;
+  list-style-type: none;
+  list-style-position: inside;
+  text-align: center;
+}
+
+.side-nav li {
+    font-size: 0.8rem; 
+}
+
+.side-nav li a:not(.button) {
+    display: block;
+    text-decoration: none;
+}
+
+    
+.side-nav li.divider {
+    border-top: 1px solid;
+    height: 0;
+    padding: 0;
+    list-style: none;
+    border-top-color: #333; 
+}
+
+
+.small-nav {
+  display: block;
+  margin: 0;
+  padding: 0.875rem;
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+.small-nav li {
+    font-size: 1.0rem; 
+    display: inline-block;
+}
+
+.small-nav li a:not(.button) {
+    display: inline-block;
+    color: #333; 
+    text-decoration: none;
+}
+
+.small-nav li a:not(.button):hover, .small-nav li a:not(.button):focus {
+    color: #666; 
+}
+
+
+/******** SMALL DEVICES ****/
+
+
+.dn-menu-small {
+    background-color: #ccc;
+    border-bottom: 1px solid #333;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 45px;
+    z-index: 99;
+}
+
+.night .dn-menu-small { 
+    background-color: #333;
+    border-bottom: 1px solid #ccc;
+}
+
+.dn-small-pagination .pagination {
+    text-align: right;
+    padding-top: 8px;
+}
+
+.dn-small-pagination .older-posts,
+.dn-small-pagination .newer-posts {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+.dn-blog-info-small {
+    margin-top: 45px;
+}
+
+.dn-small-clock {
+    margin-top: 0;
+}
+
+.dn-small-clock .dn-time {
+    display: inline-block;
+    padding-left: 35px;
+}
+
+.dn-small-clock .night-day-action {
+    position: absolute;
+    top: 9px;
+}
+
+.dn-small-clock .dn-clock {
+    background: url(icons/menu/PH_Day_phone_25x25.png) no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+}
+
+.night .dn-small-clock .dn-clock {
+    background: url(icons/menu/PH_Night_phone_25x25.png) no-repeat;
+}
+
+.dn-small-menu {
+    margin-bottom: 2rem;
+}
+
+.dn-single-column {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.dn-no-sps {}
+.dn-no-sps.sm-aj {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+.dn-blog-name-sz {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    font-weight: 700;
+    margin-left: 5px;
+}
+
+.dn-blog-name-sz.sm-aj {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   9. Media Queries - Smaller than 900px
+   ========================================================================== */
+
+@media only screen and (max-width: 1100px) {
+
+    .body-column {
+        padding-left: 50px !important;
+    }
+
+}
+
+/* ==========================================================================
+   10. Media Queries - Smaller than 500px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 640px) {
+    
+    .body-column {
+        padding-left: 0.9375em !important;
+    }
+    
+    .uimg {
+        cursor: pointer;
+        display: block;
+        width: 70px;
+        height: 70px;
+        background-size: cover;
+        background-position: center center;
+        border-radius: 100%;
+        border: 1px solid #333;
+        display: inline-block;
+    }
+    
+    .night .uimg { 
+        border: 1px solid #ccc;
+    }
+
+    .uimg-d {
+        cursor: pointer;
+        background: url(icons/day-heart.png) no-repeat;
+        display: block;
+        width: 70px;
+        height: 62px;
+        background-size: cover;
+        background-position: center center;
+        display: inline-block;
+    }
+    
+    .night .uimg-d { 
+        cursor: pointer;
+        background: url(icons/night-heart.png) no-repeat;
+        display: block;
+        width: 70px;
+        height: 62px;
+        background-size: cover;
+        background-position: center center;
+        display: inline-block;
+    }
+    
+    .dn-blog-header-small {
+        margin-top: 0.8rem;
+        text-align: center;
+    }
+    
+    .dn-blog-info-small {
+        
+    }
+    
+    .post-footer .dn-share {
+        position: relative;
+        display: inline-block;
+        top: 0;
+    }
+    
+    .dn-small-back {
+        position: absolute;
+        top: 10px;
+    }
+    
+    .main-row {
+        margin-top: 0;
+    }
+    
+    .dn-show-menu {
+        text-align: center;
+    }
+}
+
+.dn-icon-back {
+    background: url(icons/PH_Day_back_25x21.png) no-repeat;
+    background-size: 25px 21px;
+    width: 25px;
+    height: 21px;
+    display: inline-block;
+}
+
+.night .dn-icon-back {
+    background: url(icons/PH_Night_back_25x21.png) no-repeat;
+    background-size: 25px 21px;
+    width: 25px;
+    height: 21px;
+    display: inline-block;
+}
+
+.dn-icon-arrow-down {
+    background: url(icons/menu/PH_Day_menu_25x25.png) no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+.night .dn-icon-arrow-down {
+    background: url(icons/menu/PH_Night_menu_25x25.png) no-repeat;
+    background-size: 25px 25px;
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: .5s;
+}
+
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dppx) { 
+    
+    .dn-side-bar .uimg-d {
+        background: url(icons/day-heart.png) no-repeat;
+        position: absolute;
+        left: 25px;
+        bottom: 10px;
+        display: block;
+        width: 70px;
+        height: 62px;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .night .dn-side-bar .uimg-d {
+        background: url(icons/night-heart.png) no-repeat;
+        position: absolute;
+        left: 25px;
+        bottom: 10px;
+        display: block;
+        width: 70px;
+        height: 62px;
+        background-size: cover;
+        background-position: center center;
+    }
+    
+    .dn-icon-back {
+        background: url(icons/PH_Day_back_25x21_2x.png) no-repeat;
+        background-size: 25px 21px;
+        width: 25px;
+        height: 21px;
+        display: block;
+    }
+    
+    .night .dn-icon-back {
+        background: url(icons/PH_Night_back_25x21_2x.png) no-repeat;
+        background-size: 25px 21px;
+        width: 25px;
+        height: 21px;
+        display: block;
+    }
+    
+    .dn-icon-arrow-down {
+        background: url(icons/menu/PH_Day_menu_25x25_2x.png) no-repeat;
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        transition-property: all;
+        transition-duration: .5s;
+    }
+    
+    .night .dn-icon-arrow-down {
+        background: url(icons/menu/PH_Night_menu_25x25_2x.png) no-repeat;
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        transition-property: all;
+        transition-duration: .5s;
+    }
+    
+    .dn-clock {
+        background: url(icons/menu/PH_Day_50x50_2x.png) no-repeat;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+    
+    .night .dn-clock {
+        background: url(icons/menu/PH_Night_50x50_2x.png) no-repeat;
+        background-size: 50px 50px;
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+    }
+    
+    .dn-small-clock .dn-clock {
+        background: url(icons/menu/PH_Day_phone_25x25_2x.png) no-repeat;
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+    }
+
+    .night .dn-small-clock .dn-clock {
+        background: url(icons/menu/PH_Night_phone_25x25_2x.png) no-repeat;
+        background-size: 25px 25px;
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+    }
+
+
+}

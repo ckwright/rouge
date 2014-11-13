@@ -1,0 +1,35 @@
+{{!< default}}
+
+{{! The main content area on the homepage }}
+
+    <div class="large-6 medium-6 hide-for-small columns adjust dn-odd-parent"></div>
+    <div class="large-6 medium-6 hide-for-small columns adjust dn-even-parent"></div>
+    <div class="small-12 columns adjust dn-single-column"></div>
+    
+    {{#foreach posts}}
+
+    <article class="large-12 medium-12 small-12 columns {{post_class}} hidden {{#if @even}}dn-even{{else}}dn-odd{{/if}} dn-post-entry adjust dn-no-sps" id="post-{{id}}">
+        <header class="post-header">
+            <div class="large-6 medium-6 small-6 columns no-sp">
+            </div>
+            <div class="large-6 medium-6 small-6 columns no-sp">
+            </div>
+            <div class="large-12 medium-12 small-12 columns no-sp dn-date">
+                <div class="dn-head-meta dn-date-share"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD / MMM / YYYY"}}</time></div>
+                <div class="dn-share">
+                    <a class="sicon-tw" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+                    <a class="sicon-f" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
+                    <a class="sicon-g" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
+                </div>
+            </div>
+        </header>
+        <section class="large-12 medium-12 small-12 columns no-sp dn-post-excerpt">
+            <h2 class="post-title"><a href="{{url}}" class="dn-post-link">{{{title}}}</a></h2>
+            {{content words="100"}}
+        </section>
+    </article>
+    
+    {{/foreach}}

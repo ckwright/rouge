@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" type="text/css" href="{{asset "css/foundation.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,300italic' rel='stylesheet' type='text/css'>
+    
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+    
+    <script>
+    
+        {{! settings for google account and disqus commenting system (set to null if not available" }}
+    
+        var disqusShortName = null;
+        var gAccount = null; 
+        if (gAccount) {
+            var _gaq =[["_setAccount",gAccount],["_trackPageview"]];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+            g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+            s.parentNode.insertBefore(g,s)}(document,"script"));
+        }
+    
+    </script>
+        
+</head>
+<body class="{{body_class}}">
+
+    <div class="dn-side-bar hide-for-small dn-initial hidden">
+        <div class="dn-blog-name hidden">
+            <span class="adjust dn-blog-name-sz">{{@blog.title}}</span>
+        </div>
+        {{#if @blog.logo}}
+            <div class="uimg" style="background-image: url({{@blog.logo}})"></div>
+        {{else}}
+            <div class="uimg-d"></div>
+        {{/if}} 
+        
+        <div class="dn-side-menu">
+            <div class="dn-center">
+                <ul class="side-nav" style="display: none">
+                  {{> menu }}
+                </ul>
+                <div class="dn-menu-sec">
+                    <div class="dn-show-menu">
+                        <a class="dn-show-menu-action open"><span class="dn-icon-arrow-down"></span></a>
+                    </div>
+                </div>
+                <hr class="dn-msep"></hr>
+                <div class="dn-menu-sec">
+                    <a class="night-day-action"><span class="dn-clock"></span></a>
+                    <span class="dn-time">00:00 AM</span>
+                </div>
+                <hr class="dn-msep"></hr>
+                <div class="dn-menu-sec dn-nav-menu">
+                    {{#if post}}
+                        {{> backfrompost}}
+                    {{else}}
+                        {{pagination}}
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row show-for-small dn-menu-small dn-initial hidden">
+        <div class="small-6 columns dn-small-clock">
+            <a class="night-day-action"><span class="dn-clock"></span></a>
+            <span class="dn-time">00:00 AM</span>
+        </div>
+        <div class="small-6 columns dn-small-pagination dn-nav-menu">
+            {{#if post}}
+                {{> backfrompost}}
+            {{else}}
+                {{pagination}}
+            {{/if}}
+        </div>
+    </div>
+    
+    <div class="row show-for-small dn-blog-info-small dn-initial hidden">
+        <div class="large-12 medium-12 small-12 columns dn-blog-header-small">
+            <div class="small-12 columns">
+                {{#if @blog.logo}}
+                    <div class="uimg" style="background-image: url({{@blog.logo}})"></div>
+                {{else}}
+                    <div class="uimg-d"></div>
+                {{/if}} 
+                <div>
+                    <h5>{{@blog.title}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="large-12 medium-12 small-12 columns dn-small-menu no-sp">
+            <ul class="side-nav" style="display: none">
+              {{> menu }}
+            </ul>
+            <div class="dn-menu-sec">
+                <div class="dn-show-menu">
+                    <a class="dn-show-menu-action open"><span class="dn-icon-arrow-down"></span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row main-row dn-initial hidden">
+        <div class="large-11 medium-10 small-12 columns body-column adjust dn-cnt large-centered medium-centered" id="dn-content">
+            {{{body}}}
+        </div>
+    </div>
+    <div class="large-12 medium-12 small-12 columns dn-load-img night-load hidden no-sp">
+        <img src="{{asset "css/icons/load/night.gif"}}" class="" />
+    </div>
+     <div class="large-12 medium-12 small-12 columns dn-load-img day-load hidden no-sp">
+        <img src="{{asset "css/icons/load/day.gif"}}" class="" />
+    </div>
+    
+    
+    <footer class="site-footer dn-initial hidden">
+        <a class="subscribe sicon-rss" href="{{@blog.url}}/rss/"></a>
+        <div class="inner">
+             <section class="copyright">All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</section>
+             <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a> theme adapted from <a class="icon-theme" href="https://phantomus.com/features#themes">Night & Day</a></section>
+        </div>
+    </footer>
+    
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    <script type="text/javascript" src="{{asset "js/jquery.fitvids.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/index.js"}}"></script>
+    
+</body>
+</html>

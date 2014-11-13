@@ -1,0 +1,85 @@
+{{!< default}}
+    
+<div class="large-12 medium-12 small-12 columns adjust dn-post-c">
+    <article class="large-12 medium-12 small-12 columns {{post_class}} adjust dn-no-sps" id="post-{{id}}"> 
+
+        {{#post}}
+        
+        <header class="post-header">
+            <div class="large-6 medium-6 small-6 columns no-sp">
+            </div>
+            <div class="large-6 medium-6 small-6 columns no-sp">
+            </div>
+            <div class="large-12 medium-12 small-12 columns no-sp dn-date ">
+                <div class="dn-head-meta dn-date-share"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD / MMM / YYYY"}}</time></div>
+                <div class="dn-share">
+                    <a class="sicon-tw" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+                    <a class="sicon-f" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
+                    <a class="sicon-g" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
+                </div>
+            </div>
+        </header>
+
+        <section class="large-12 medium-12 small-12 columns no-sp">
+            <h2 class="post-title">{{{title}}}</h2>
+            
+            <section class="post-content">
+                {{content}}
+            </section>
+        </section>
+            
+        <section class="large-12 medium-12 small-12 columns no-sp">
+            <div class="large-6 medium-6 small-12 columns no-sp post-footer">
+            </div>
+            <div class="large-6 medium-6 small-12 columns no-sp post-footer footer-right">
+                <div class="dn-share">
+                    <a class="sicon-tw" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+                    <a class="sicon-f" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"></a>
+                    <a class="sicon-g" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;"></a>
+                </div>
+                <div class="dn-small-back show-for-small">
+                    <a href="/" class="older-posts dn-back-to-posts" data-pjax="">BACK TO POSTS</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="large-12 medium-12 small-12 columns no-sp disqus-comments" style="margin-top: 3rem">
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                    if (disqusShortName) {
+                        var loadDisqus = true;
+                        if (typeof DISQUS != 'undefined') {
+                            DISQUS.reset({reload: true, config: function () {
+                                    this.page.identifier = '{{id}}';
+                                    this.page.url = location.protocol + '//' + window.location.host + '{{url}}#!/{{id}}';
+                                }
+                            });
+                            loadDisqus = false;
+                        }
+        
+                        var disqus_shortname = disqusShortName;
+                        var disqus_identifier = '{{id}}';
+                        var disqus_url = location.protocol + '//' + window.location.host + '{{url}}#!/{{id}}';
+                        
+                        if (loadDisqus) {
+                            (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                            })();
+                        }
+                    }
+                </script>
+        </section>
+
+        {{/post}}
+    
+    </article>
+</div>
+

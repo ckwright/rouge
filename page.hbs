@@ -1,0 +1,19 @@
+{{!< default}}
+<div class="large-12 medium-12 small-12 columns">
+    <article class="large-12 medium-12 small-12 columns {{post_class}}" id="post-{{id}}"> 
+        {{#post}}
+        <header class="post-header">
+            <div class="large-6 medium-6 small-6 columns no-sp">
+            </div>
+        </header>
+        <section class="large-12 medium-12 small-12 columns no-sp">
+            <h2 class="post-title">{{{title}}}</h2>
+            <section class="post-content">
+                {{content}}
+            </section>
+        </section>
+        <section class="large-12 medium-12 small-12 columns no-sp">
+        </section>
+        {{/post}}
+    </article>
+</div>
